@@ -21,4 +21,4 @@ jobs:
             instance_name: 'server'
             zone: 'us-east4-a'
             ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
-            command: 'echo "Hello world" > /home/student-02-c321116f1c6d/d.txt'
+            command: echo "Done"
