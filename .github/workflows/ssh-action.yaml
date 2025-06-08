@@ -14,11 +14,11 @@ jobs:
         uses: 'google-github-actions/auth@v2'
         with:
             credentials_json: '${{ secrets.gcp_credentials }}'
-            
+
       - name: "Perform SSH"
         uses: 'google-github-actions/ssh-compute@v1'
         with:
             instance_name: 'server'
             zone: 'us-east4-a'
             ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
-            command: 'echo "Hello world" > d.txt'
+            command: 'echo "Hello world" > ~/d.txt'
